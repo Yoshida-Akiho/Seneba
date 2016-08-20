@@ -65,7 +65,6 @@ class TasksController < ApplicationController
       render :index  
   end  
 
-
   # DELETE /tasks/1
   # DELETE /tasks/1.json
   def destroy

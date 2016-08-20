@@ -16,7 +16,7 @@
     <%= f.date_select :due_date %>
   </div>
   <div class="field">
-    <%= f.label :category_id ,"カテゴリーID" %><br>
+    <%= f.label :category_id ,"カテゴリー" %><br>
     <%= f.collection_select :category_id,  Category.all, :categoryname,:categoryname  %>
   </div>
   <div class="field">
@@ -28,7 +28,7 @@
     <%= f.check_box :dune %>
   </div>
   <div class="field">
-    <%= f.label :user_id ,"ユーザーID" %><br>
+    <%= f.label :user_id ,"ユーザー" %><br>
     <%= f.collection_select :user_id,  User.all, :username, :username %>
   </div>
   <div class="actions">

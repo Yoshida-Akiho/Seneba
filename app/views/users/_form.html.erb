@@ -20,8 +20,8 @@
     <%= f.text_field :username %>
   </div>
   <div class="field">
-    <%= f.label :password ,"パスワード" %><br>
-    <%= f.text_field :password %>
+    <%= f.label :password ,"パスワード(４桁で)" %><br>
+    <%= f.text_field :password, :maxlength => 4 %>
   </div>
   <div class="actions">
     <%= f.submit %>
