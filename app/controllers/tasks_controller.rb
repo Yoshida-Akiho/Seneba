@@ -54,7 +54,7 @@ class TasksController < ApplicationController
   def search
     @search_value = params["search"]["name"]   
     @search_user = params["search"]["user"]   
-    @search_category = params["search"]["category"]   
+    @search_category = params["search"]["category"] 
     @tasks = Task.where("name like '%#{@search_value}%'")  
     if @search_user.present?  
       @tasks = @tasks.where(user_id: @search_user)  
@@ -64,6 +64,12 @@ class TasksController < ApplicationController
     end  
       render :index  
   end  
+
+  def search2
+    @tasks = Task.where(dune: false)
+    render :index 
+  end
+
 
   # DELETE /tasks/1
   # DELETE /tasks/1.json

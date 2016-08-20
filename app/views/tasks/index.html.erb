@@ -9,6 +9,7 @@
   <%= collection_select 'search', 'category', Category.all, :categoryname, :categoryname, {selected: @search_category,include_blank: "全カテゴリー"} %>
   <%= text_field_tag "search[name]",@search_value %>
   <%= submit_tag "検索" %>
+  <%= link_to "できてないやつだけ表示", search2_tasks_path %>
   <%= link_to "リセット", tasks_path%>
 <% end %>
 
@@ -44,3 +45,4 @@
 <br>
 
 <%= link_to '新しいタスク登録', new_task_path %>
+  <%= link_to "リセット", tasks_path%>
